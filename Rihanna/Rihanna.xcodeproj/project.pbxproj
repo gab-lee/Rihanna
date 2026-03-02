@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1C545C942F55CB340054DDFB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C545C932F55CB340054DDFB /* WidgetKit.framework */; };
+		1C545C962F55CB340054DDFB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C545C952F55CB340054DDFB /* SwiftUI.framework */; };
+		1C545CA12F55CB380054DDFB /* RihannaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1C545C912F55CB330054DDFB /* RihannaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C545C9F2F55CB380054DDFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C545C712F55C7A80054DDFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C545C902F55CB330054DDFB;
+			remoteInfo = RihannaWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1C545CA62F55CB380054DDFB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1C545CA12F55CB380054DDFB /* RihannaWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1C545C792F55C7A80054DDFB /* Rihanna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rihanna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C545C912F55CB330054DDFB /* RihannaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RihannaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C545C932F55CB340054DDFB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1C545C952F55CB340054DDFB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1C545CA22F55CB380054DDFB /* Exceptions for "RihannaWidget" folder in "RihannaWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1C545C902F55CB330054DDFB /* RihannaWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1C545C7B2F55C7A80054DDFB /* Rihanna */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Rihanna;
+			sourceTree = "<group>";
+		};
+		1C545C972F55CB340054DDFB /* RihannaWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1C545CA22F55CB380054DDFB /* Exceptions for "RihannaWidget" folder in "RihannaWidgetExtension" target */,
+			);
+			path = RihannaWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1C545C8E2F55CB330054DDFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C545C962F55CB340054DDFB /* SwiftUI.framework in Frameworks */,
+				1C545C942F55CB340054DDFB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				1C545C7B2F55C7A80054DDFB /* Rihanna */,
+				1C545C972F55CB340054DDFB /* RihannaWidget */,
+				1C545C922F55CB340054DDFB /* Frameworks */,
 				1C545C7A2F55C7A80054DDFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				1C545C792F55C7A80054DDFB /* Rihanna.app */,
+				1C545C912F55CB330054DDFB /* RihannaWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1C545C922F55CB340054DDFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C545C932F55CB340054DDFB /* WidgetKit.framework */,
+				1C545C952F55CB340054DDFB /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				1C545C752F55C7A80054DDFB /* Sources */,
 				1C545C762F55C7A80054DDFB /* Frameworks */,
 				1C545C772F55C7A80054DDFB /* Resources */,
+				1C545CA62F55CB380054DDFB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1C545CA02F55CB380054DDFB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				1C545C7B2F55C7A80054DDFB /* Rihanna */,
@@ -69,6 +143,28 @@
 			productName = Rihanna;
 			productReference = 1C545C792F55C7A80054DDFB /* Rihanna.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1C545C902F55CB330054DDFB /* RihannaWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C545CA32F55CB380054DDFB /* Build configuration list for PBXNativeTarget "RihannaWidgetExtension" */;
+			buildPhases = (
+				1C545C8D2F55CB330054DDFB /* Sources */,
+				1C545C8E2F55CB330054DDFB /* Frameworks */,
+				1C545C8F2F55CB330054DDFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1C545C972F55CB340054DDFB /* RihannaWidget */,
+			);
+			name = RihannaWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = RihannaWidgetExtension;
+			productReference = 1C545C912F55CB330054DDFB /* RihannaWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					1C545C782F55C7A80054DDFB = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					1C545C902F55CB330054DDFB = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				1C545C782F55C7A80054DDFB /* Rihanna */,
+				1C545C902F55CB330054DDFB /* RihannaWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1C545C772F55C7A80054DDFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C545C8F2F55CB330054DDFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1C545C8D2F55CB330054DDFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C545CA02F55CB380054DDFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C545C902F55CB330054DDFB /* RihannaWidgetExtension */;
+			targetProxy = 1C545C9F2F55CB380054DDFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1C545C822F55C7AB0054DDFB /* Debug */ = {
@@ -312,6 +434,66 @@
 			};
 			name = Release;
 		};
+		1C545CA42F55CB380054DDFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D3ZRFB6L9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RihannaWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RihannaWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = duckduckdev.Rihanna.RihannaWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C545CA52F55CB380054DDFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D3ZRFB6L9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RihannaWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RihannaWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = duckduckdev.Rihanna.RihannaWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +511,15 @@
 			buildConfigurations = (
 				1C545C852F55C7AB0054DDFB /* Debug */,
 				1C545C862F55C7AB0054DDFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C545CA32F55CB380054DDFB /* Build configuration list for PBXNativeTarget "RihannaWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C545CA42F55CB380054DDFB /* Debug */,
+				1C545CA52F55CB380054DDFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
