@@ -47,7 +47,7 @@ struct RihannaWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
+        HStack {
             Text("Time:")
             Text(entry.date, style: .time)
 
@@ -73,12 +73,17 @@ struct RihannaWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+        .supportedFamilies([
+            .systemSmall,
+            .accessoryInline,
+            .accessoryCircular,
+            .accessoryRectangular
+        ])
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview("Rectangular", as: .accessoryRectangular) {
     RihannaWidget()
 } timeline: {
     SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
 }
