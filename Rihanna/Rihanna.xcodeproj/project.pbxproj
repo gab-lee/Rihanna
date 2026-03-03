@@ -51,11 +51,21 @@
 			);
 			target = 1C545C902F55CB330054DDFB /* RihannaWidgetExtension */;
 		};
+		1C545CA82F568D480054DDFB /* Exceptions for "Rihanna" folder in "RihannaWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+			);
+			target = 1C545C902F55CB330054DDFB /* RihannaWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1C545C7B2F55C7A80054DDFB /* Rihanna */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1C545CA82F568D480054DDFB /* Exceptions for "Rihanna" folder in "RihannaWidgetExtension" target */,
+			);
 			path = Rihanna;
 			sourceTree = "<group>";
 		};

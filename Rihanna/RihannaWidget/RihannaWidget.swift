@@ -41,18 +41,29 @@ struct Provider: TimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let emoji: String
+    //Add weather entry
 }
 
 struct RihannaWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        HStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
+        ZStack{
+            ContainerRelativeShape()
+                .fill(.gray.gradient)
+            HStack{
+                VStack{
+                    Text(entry.date, style:.time)
+                    Image("cat_umbrella")
+                        .resizable()
+                        .scaledToFit()
+                }
+                VStack{
+                    Text("🌧")
+                    Text("🌧")
+                    Text("🌧")
+                }
+            }
         }
     }
 }
@@ -82,7 +93,21 @@ struct RihannaWidget: Widget {
     }
 }
 
+//Previews
+
 #Preview("Rectangular", as: .accessoryRectangular) {
+    RihannaWidget()
+} timeline: {
+    SimpleEntry(date: .now, emoji: "😀")
+}
+
+#Preview("SystemSmall", as: .systemSmall) {
+    RihannaWidget()
+} timeline: {
+    SimpleEntry(date: .now, emoji: "😀")
+}
+
+#Preview("Circular", as: .accessoryCircular) {
     RihannaWidget()
 } timeline: {
     SimpleEntry(date: .now, emoji: "😀")
