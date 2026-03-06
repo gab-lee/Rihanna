@@ -7,3 +7,5 @@ build/
 
 # SwiftPM
 .swiftpm/
+Config.plist
+Config.plist
