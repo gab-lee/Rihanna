@@ -10,6 +10,7 @@
 		1C545C942F55CB340054DDFB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C545C932F55CB340054DDFB /* WidgetKit.framework */; };
 		1C545C962F55CB340054DDFB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C545C952F55CB340054DDFB /* SwiftUI.framework */; };
 		1C545CA12F55CB380054DDFB /* RihannaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1C545C912F55CB330054DDFB /* RihannaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1C57A3F32F5ADEAE008DF926 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C57A3F22F5ADEAE008DF926 /* Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		1C545C912F55CB330054DDFB /* RihannaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RihannaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C545C932F55CB340054DDFB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1C545C952F55CB340054DDFB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		1C57A3F22F5ADEAE008DF926 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -102,6 +104,7 @@
 		1C545C702F55C7A80054DDFB = {
 			isa = PBXGroup;
 			children = (
+				1C57A3F22F5ADEAE008DF926 /* Config.plist */,
 				1C545C7B2F55C7A80054DDFB /* Rihanna */,
 				1C545C972F55CB340054DDFB /* RihannaWidget */,
 				1C545C922F55CB340054DDFB /* Frameworks */,
@@ -219,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C57A3F32F5ADEAE008DF926 /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

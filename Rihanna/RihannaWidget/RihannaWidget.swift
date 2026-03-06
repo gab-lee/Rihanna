@@ -31,6 +31,8 @@ struct Provider: TimelineProvider {
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
+        
+        
     }
 
 //    func relevances() async -> WidgetRelevances<Void> {
@@ -53,7 +55,7 @@ struct RihannaWidgetEntryView : View {
                 .fill(.gray.gradient)
             HStack{
                 VStack{
-                    Text(entry.date, style:.time)
+                    Text("Hello")
                     Image("cat_umbrella")
                         .resizable()
                         .scaledToFit()
